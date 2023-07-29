@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Toast, Inc.">
+        <meta data-rh="true" name="description" content="Best place to order takeout and delivery. Great selection with lowest prices and no commissions for restaurants. Search by location, cuisine, and more."/>
+        <title data-rh="true">Takeout &amp;Delivery From Top Restaurants Near You | SWIGATTO</title>
+        <link data-rh="true" rel="canonical" href="https://www.toasttab.com/local"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/common/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='css/logo.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='css/logo.png')}}">
+        <link rel="manifest" href="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/common/favicon/site.webmanifest">
+        <link rel="mask-icon" href="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#b91d47">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/app/public_1680882083.min.css">
+        <!-- PURE CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"/>
+        <!-- Sentry error monitoring -->
+        <script src="https://browser.sentry-cdn.com/5.16.1/bundle.min.js" integrity="sha384-XeIbINcUQP10HtmVHwZigannjNDpoQRe+uhAoW9J5HU5dHFpilP164LjqO78xtIB" crossorigin="anonymous"></script>
+        <script>
+            if (typeof Sentry !== 'undefined') {
+                Sentry.init({
+                    dsn: 'https://a8137646844940c281a40e1d93ec98fb@o37442.ingest.sentry.io/6180751',
+                    release: 'toast-local-web@0.0.3'
+                });
+            }
+        </script>
+        <!-- Google Analytics -->
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }
+                ,
+                i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            }
+            )(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-212308435-1', 'auto');
+        </script>
+        <!-- Heap Analytics -->
+        <script type="text/javascript">
+            window.heap = window.heap || [],
+            heap.load = function(e, t) {
+                window.heap.appid = e,
+                window.heap.config = t = t || {};
+                var r = document.createElement("script");
+                r.type = "text/javascript",
+                r.async = !0,
+                r.src = "https://cdn.heapanalytics.com/js/heap-" + e + ".js";
+                var a = document.getElementsByTagName("script")[0];
+                a.parentNode.insertBefore(r, a);
+                for (var n = function(e) {
+                    return function() {
+                        heap.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }, p = ["addEventProperties", "addUserProperties", "clearEventProperties", "identify", "resetIdentity", "removeEventProperty", "setEventProperties", "track", "unsetEventProperty"], o = 0; o < p.length; o++)
+                    heap[p[o]] = n(p[o])
+            }
+            ;
+            heap.load("4210567126");
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="app-wrapper">
+                <div class="nav-bar pure-g">
+                    <div class="pure-u-1-24"></div>
+                    <div class="nav-logo pure-u-8-24">
+                        <a class="logo-link" href="/home_1">
+                            <img src="{{ url_for('static', filename='css/logo.png')}}" loading="eager" class="logo-img" alt="SWIGATTO" height="100"/>
+                        </a>
+                    </div>
+                    <div class="nav-search pure-u-14-24">
+                        <div class="pos-promo-mini hidden-sm-down">
+                            <span class="message">See your Cart</span>
+                            <a href="/cart" class="button-sm button-blue cta">Your Cart</a>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-24"></div>
+                </div>
+                <div class="container splash">
+                    <div class="hero-image search-hero">
+                        <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/fresh-food-on-a-wooden-table-1440.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/restaurant-road-map-600.png 600w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/restaurant-road-map-1200.png 1200w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/restaurant-road-map-2400.png 2400w" loading="eager" class="bg-image" alt="Food being prepped"/>
+                        <div class="hero-content">
+                            <div class="search-hero-content">
+                                <div class="pure-g">
+                                    <div class="left-content pure-u-24-24 pure-u-lg-14-24">
+                                        <h1>
+                                            Order directly<br/>
+                                            from the restaurants<br/>you love
+                                        </h1>
+                                        <div class="search-bar full">
+                                            <div class="autocomplete-module__autocomplete___c5Gts">
+                                                <input type="text" placeholder="Enter a city or address" value=""/>
+                                            </div>
+                                            <div class="submit-button">
+                                                <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/icons/search-white.svg" loading="eager" alt="Go" height="0" class="search-icon"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-content pure-u-lg-10-24 hidden-md-down">
+                                        <div class="food-plate food-plate-1">
+                                            <div class="cropper">
+                                                <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/healthy-salad-plate-200.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/healthy-salad-plate-200.jpg 200w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/healthy-salad-plate-400.jpg 400w" loading="eager" alt="Fresh salad"/>
+                                            </div>
+                                        </div>
+                                        <div class="food-plate food-plate-2">
+                                            <div class="cropper">
+                                                <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/fresh-fish-dinner-200.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/fresh-fish-dinner-200.jpg 200w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/fresh-fish-dinner-400.jpg 400w" loading="eager" alt="Fish plate"/>
+                                            </div>
+                                        </div>
+                                        <div class="food-plate food-plate-3">
+                                            <div class="cropper">
+                                                <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/salad-with-spiralized-carrots-200.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/salad-with-spiralized-carrots-200.jpg 200w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/splash/salad-with-spiralized-carrots-400.jpg 400w" loading="eager" alt="Carrot salad"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cuisine-farm">
+                        <h2>Popular near you</h2>
+                        <div class="pure-g cuisine-cards">
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/pizza">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/vegetable-pizza-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/vegetable-pizza-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/vegetable-pizza-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/vegetable-pizza-88.jpg 88w" loading="eager" class="cuisine-image" alt="Vegetable pizza" onclick="showPopup">
+                                        </div>
+                                        <h3 class="cuisine-title">Pizza</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.4 rating from 3792 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.4
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            3792
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">From simple margherita to totally customizable pies, plus the sides you love.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/American">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/hotdog-with-onions-and-mustard-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/hotdog-with-onions-and-mustard-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/hotdog-with-onions-and-mustard-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/hotdog-with-onions-and-mustard-88.jpg 88w" loading="eager" class="cuisine-image" alt="Hotdog with mustard" onclick="showPopup">
+                                        </div>
+                                        <h3 class="cuisine-title">American</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.3 rating from 7619 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.3
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            7619
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">Comfort food classics or New American styles influenced by global cuisine. </p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Italian">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/seafood-salad-on-spaghetti-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/seafood-salad-on-spaghetti-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/seafood-salad-on-spaghetti-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/seafood-salad-on-spaghetti-88.jpg 88w" loading="eager" class="cuisine-image" alt="Seafood salad" onclick="showPopup">
+                                        </div>
+                                        <h3 class="cuisine-title">Italian</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.4 rating from 2254 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.4
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            2254
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">Delicious at every course – from antipasto to dolce.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/coffee">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/espresso-drink-and-almond-croissant-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/espresso-drink-and-almond-croissant-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/espresso-drink-and-almond-croissant-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/espresso-drink-and-almond-croissant-88.jpg 88w" loading="eager" class="cuisine-image" alt="Espresso drink" onclick="showPopup">
+                                        </div>
+                                        <h3 class="cuisine-title">Cafes, Coffee &amp;Tea</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.5 rating from 3124 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.5
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            3124
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">From quick to-go coffees to energizing cuppas, these places keep us running.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Brunch">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/poached-egg-on-toast-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/poached-egg-on-toast-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/poached-egg-on-toast-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/poached-egg-on-toast-88.jpg 88w" loading="eager" class="cuisine-image" alt="Poached egg sammy" onclick="showPopup">
+                                        </div>
+                                        <h3 class="cuisine-title">Breakfast &amp;Brunch</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.4 rating from 3727 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.4
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            3727
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">French toast, eggs and bacon... it’s the best meal of the day for a reason.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Tex-Mex">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/mexican-street-corn-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/mexican-street-corn-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/mexican-street-corn-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/mexican-street-corn-88.jpg 88w" loading="eager" class="cuisine-image" alt="Mexican street corn" onclick="showPopup">
+                                        </div>
+                                        <h3 class="cuisine-title">Mexican &amp;Tex-Mex</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.3 rating from 2793 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.3
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            2793
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">Traditional Mexican cuisine, plates with a Texas twist, and more.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/popup">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/cocktail-and-snacks-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/cocktail-and-snacks-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/cocktail-and-snacks-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/cocktail-and-snacks-88.jpg 88w" loading="eager" class="cuisine-image" alt="Cocktail and snacks"/>
+                                        </div>
+                                        <h3 class="cuisine-title">Bars &amp;Lounges</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.4 rating from 9133 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.4
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            9133
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">A favorite watering hole or a spot for a big night out – or something in-between.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Seafood">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/scallops-on-bed-of-vegetables-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/scallops-on-bed-of-vegetables-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/scallops-on-bed-of-vegetables-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/scallops-on-bed-of-vegetables-88.jpg 88w" loading="eager" class="cuisine-image" alt="Scallops and vegitables"/>
+                                        </div>
+                                        <h3 class="cuisine-title">Seafood</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.3 rating from 2259 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.3
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            2259
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">Fish, shellfish, and crustacean favorites from the sea, prepped the way you like.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Breweries">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/flight-of-beers-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/flight-of-beers-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/flight-of-beers-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/flight-of-beers-88.jpg 88w" loading="eager" class="cuisine-image" alt="Flight of beer"/>
+                                        </div>
+                                        <h3 class="cuisine-title">Brewpubs &amp;Breweries</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.4 rating from 1176 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.4
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            1176
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">Team IPA or pilsner? Whatever your style, find freshly poured pints here.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Burgers">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/fat-juicy-burgers-and-fries-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/fat-juicy-burgers-and-fries-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/fat-juicy-burgers-and-fries-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/fat-juicy-burgers-and-fries-88.jpg 88w" loading="eager" class="cuisine-image" alt="Juicy burgers"/>
+                                        </div>
+                                        <h3 class="cuisine-title">Burgers</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.4 rating from 2239 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.4
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            2239
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">From crispy smashed patties to reimagined classics and beyond.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Sandwiches">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/steak-and-cheese-with-onions-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/steak-and-cheese-with-onions-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/steak-and-cheese-with-onions-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/steak-and-cheese-with-onions-88.jpg 88w" loading="eager" class="cuisine-image" alt="Cheesesteak" onclick="showPopup"/>
+                                        </div>
+                                        <h3 class="cuisine-title">Sandwiches</h3>
+                                    </a>
+                                    <div class="avg-rating" title="This restaurant has a 4.4 rating from 4004 reviews on restaurant review sites.">
+                                        <svg class="star-img" width="14" height="14" viewBox="0 0 14 14" stroke="#2B4FB9" fill="#2B4FB9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.78632 1.79791L8.91965 4.13124C9.05299 4.39791 9.31965 4.59791 9.58632 4.59791L12.1863 4.99791C12.9197 5.13124 13.1863 5.99791 12.653 6.53124L10.7863 8.33124C10.5863 8.53124 10.453 8.79791 10.5197 9.13124L10.9863 11.6646C11.1197 12.3979 10.3197 12.9312 9.65299 12.5979L7.31965 11.3979C7.05299 11.2646 6.71965 11.2646 6.45299 11.3979L4.11965 12.5979C3.45299 12.9312 2.71965 12.3979 2.78632 11.6646L3.25299 9.13124C3.38632 8.79791 3.31965 8.46457 3.11965 8.26457L1.25299 6.46457C0.719652 5.93124 0.986319 5.06457 1.71965 4.93124L4.31965 4.53124C4.58632 4.46457 4.85299 4.33124 4.98632 4.06457L6.11965 1.73124C6.45299 1.13124 7.45299 1.13124 7.78632 1.79791Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="txt-title-xs">
+                                            Avg 
+                                            <!-- -->
+                                            4.4
+                                            <!-- -->
+                                            <span class="text-color-gray">(
+                                            <!-- -->
+                                            4004
+                                            <!-- -->
+                                            restaurants
+                                            <!-- -->
+                                            )</span>
+                                        </div>
+                                    </div>
+                                    <p class="cuisine-card-desc">Hoagies, subs, grinders… Whatever you call them, you know it when you see it.</p>
+                                </div>
+                            </div>
+                            <div class="cuisine-card pure-u-12-24 pure-u-md-6-24 pure-u-lg-4-24">
+                                <div class="cuisine-card-content">
+                                    <a href="/Barbeque">
+                                        <div class="cuisine-image-wrapper">
+                                            <img src="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/ribs-with-mac-and-cheese-176.jpg" srcSet="https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/ribs-with-mac-and-cheese-352.jpg 352w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/ribs-with-mac-and-cheese-176.jpg 176w, https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/cuisines/ribs-with-mac-and-cheese-88.jpg 88w" loading="eager" class="cuisine-image" alt="BBQ dinner"/>
+                                        </div>
+                                        <h3 class="cuisine-title">Barbeque</h3>
+                                    </a>
+                                    
+                        
